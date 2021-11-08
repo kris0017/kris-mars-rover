@@ -8,5 +8,6 @@
   },
   "keywords": [],
   "author": "Krystyna Fedzhora",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
