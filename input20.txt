@@ -1,0 +1,41 @@
+Plateau:5 5
+Rover1 Landing:1 2 N
+Rover1 Instructions:LMLMLMLMM
+Rover2 Landing:3 3 E
+Rover2 Instructions:MMRMMRMRRM
+Rover3 Landing:1 2 N
+Rover3 Instructions:LMLMLMLMM
+Rover4 Landing:3 3 E
+Rover4 Instructions:MMRMMRMRRM
+Rover5 Landing:1 2 N
+Rover5 Instructions:LMLMLMLMM
+Rover6 Landing:3 3 E
+Rover6 Instructions:MMRMMRMRRM
+Rover7 Landing:1 2 N
+Rover7 Instructions:LMLMLMLMM
+Rover8 Landing:3 3 E
+Rover8 Instructions:MMRMMRMRRM
+Rover9 Landing:1 2 N
+Rover9 Instructions:LMLMLMLMM
+Rover10 Landing:3 3 E
+Rover10 Instructions:MMRMMRMRRM
+Rover11 Landing:1 2 N
+Rover11 Instructions:LMLMLMLMM
+Rover12 Landing:3 3 E
+Rover12 Instructions:MMRMMRMRRM
+Rover13 Landing:1 2 N
+Rover13 Instructions:LMLMLMLMM
+Rover14 Landing:3 3 E
+Rover14 Instructions:MMRMMRMRRM
+Rover15 Landing:1 2 N
+Rover15 Instructions:LMLMLMLMM
+Rover16 Landing:3 3 E
+Rover16 Instructions:MMRMMRMRRM
+Rover17 Landing:1 2 N
+Rover17 Instructions:LMLMLMLMM
+Rover18 Landing:3 3 E
+Rover18 Instructions:MMRMMRMRRM
+Rover19 Landing:1 2 N
+Rover19 Instructions:LMLMLMLMM
+Rover20 Landing:3 3 E
+Rover20 Instructions:MMRMMRMRRM

@@ -31,14 +31,14 @@ const parseContent = (allFileContent) => {
   return { plateauSize, messages };
 };
 
-const readFile = async () => {
-  const allFileContent = await fs.readFileSync('input.txt', 'utf-8');
+const readFile = async (file) => {
+  const allFileContent = await fs.readFileSync(file, 'utf-8');
 
   return allFileContent;
 };
 
-const processFile = async () => {
-  const fileContent = await readFile();
+const processFile = async ({ file }) => {
+  const fileContent = await readFile(file);
   const { plateauSize, messages } = parseContent(fileContent);
 
   Object.keys(messages).forEach((rover) => {
