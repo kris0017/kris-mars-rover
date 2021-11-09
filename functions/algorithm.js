@@ -1,4 +1,4 @@
-const { CONTROLS, COMPASS_POINTS } = require('./constants');
+const { CONTROLS, COMPASS_POINTS } = require('../utils/constants');
 
 const getCardinalDirections = (start, turn) => {
   if (turn === CONTROLS.LEFT) {
@@ -54,11 +54,16 @@ const getPlateauSize = (plateauLine) => {
   }
 };
 
-const calculatePosition = ({ plateauSize, roverInput, rover }) => {
+const calculatePosition = ({
+  plateauSize = [],
+  roverInput = {},
+  rover,
+} = {}) => {
   try {
     const { landing, instructions } = roverInput;
 
-    if (plateauSize.length !== 2) throw new Error(`Unknown plateau size`);
+    if (!plateauSize || plateauSize?.length !== 2)
+      throw new Error(`Unknown plateau size`);
     if (!landing) throw new Error(`No landing data`);
     if (!instructions) throw new Error(`No instructions data`);
 
@@ -88,12 +93,14 @@ const calculatePosition = ({ plateauSize, roverInput, rover }) => {
 
     return coordinates.join(' ');
   } catch (e) {
-    console.error(`Unable to get values for ${rover}:`, e);
+    console.error(`Unable to get values for ${rover}. ${e}`);
     return 'unknown';
   }
 };
 
 module.exports = {
+  getCardinalDirections,
+  getCoordinatesAfterMove,
   getPlateauSize,
   calculatePosition,
 };
