@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { getPlateauSize, calculatePosition } = require('./algorithm');
-const { getSplitSeparator } = require('./utils');
-const { PLATEAU, ROVER, LANDING, INSTRUCTIONS } = require('./constants');
+const { getSplitSeparator } = require('../utils');
+const { PLATEAU, ROVER, LANDING, INSTRUCTIONS } = require('../utils/constants');
 
 const parseContent = (allFileContent) => {
   const messages = {};
@@ -32,9 +32,13 @@ const parseContent = (allFileContent) => {
 };
 
 const readFile = async (file) => {
-  const allFileContent = await fs.readFileSync(file, 'utf-8');
+  try {
+    const allFileContent = await fs.readFileSync(file, 'utf-8');
 
-  return allFileContent;
+    return allFileContent;
+  } catch (e) {
+    throw new Error(`Can't read file`);
+  }
 };
 
 const processFile = async ({ file }) => {
@@ -51,4 +55,4 @@ const processFile = async ({ file }) => {
   });
 };
 
-module.exports = { processFile };
+module.exports = { processFile, readFile, parseContent };
